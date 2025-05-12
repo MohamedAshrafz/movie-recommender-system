@@ -1,4 +1,4 @@
-package io.spring.basic.movie_recommender_system;
+package io.spring.basic.movie_recommender_system.lesson1;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
