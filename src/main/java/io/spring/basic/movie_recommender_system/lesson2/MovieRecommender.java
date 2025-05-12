@@ -1,6 +1,5 @@
 package io.spring.basic.movie_recommender_system.lesson2;
 
-import io.spring.basic.movie_recommender_system.lesson2.filters.CollaborativeFilter;
 import io.spring.basic.movie_recommender_system.lesson2.filters.MoviesFilter;
 
 import java.util.List;
