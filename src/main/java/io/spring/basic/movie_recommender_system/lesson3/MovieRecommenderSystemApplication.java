@@ -1,22 +1,19 @@
 package io.spring.basic.movie_recommender_system.lesson3;
 
-import com.sun.tools.javac.Main;
-import io.spring.basic.movie_recommender_system.lesson3.config.ProjectConfigStereotype;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.web.reactive.context.AnnotationConfigReactiveWebApplicationContext;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = {"io.spring.basic.movie_recommender_system.lesson3.filters", "io.spring.basic.movie_recommender_system.lesson3"})
+// like using @Configuration, @ComponentScan & @EnableAutoConfiguration
 public class MovieRecommenderSystemApplication {
 
     public static void main(String[] args) {
-        ApplicationContext context = new AnnotationConfigApplicationContext(ProjectConfigStereotype.class);
+        ApplicationContext context = SpringApplication.run(MovieRecommenderSystemApplication.class, args);
 
-        MovieRecommender movieRec = context.getBean(MovieRecommender.class);
+        MovieRecommender movieRecommender = context.getBean(MovieRecommender.class);
 
-        System.out.println(movieRec.recommendMovies("Dory here"));
+        System.out.println(movieRecommender.recommendMovies("Dory"));
     }
 
 }
