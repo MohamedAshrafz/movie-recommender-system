@@ -12,10 +12,10 @@ public class MovieRecommenderSystemApplication {
     public static void main(String[] args) {
         ApplicationContext context = SpringApplication.run(MovieRecommenderSystemApplication.class, args);
 
-//        MovieRecommender movieRecommender = context.getBean(MovieRecommender.class);
-//
-//        System.out.println(movieRecommender.recommendMovies("Dory"));
-//        System.out.printf("The content based filter is the same bean? [%b]\n", movieRecommender.getFilter() == context.getBean(ContentBasedFilter.class));
+        MovieRecommender movieRecommender = context.getBean(MovieRecommender.class);
+
+        System.out.println(movieRecommender.recommendMovies("Dory"));
+        System.out.printf("The content based filter is the same bean? [%b]\n", movieRecommender.getFilter() == context.getBean(ContentBasedFilter.class));
     }
 
 }

@@ -14,7 +14,6 @@ import java.util.List;
 
  Spring creates a singleton bean even before we ask for it,
  while a prototype bean is not created till we request Spring for the bean. In the code widget below */
-@Primary
 public class ContentBasedFilter implements MoviesFilter {
 
 
