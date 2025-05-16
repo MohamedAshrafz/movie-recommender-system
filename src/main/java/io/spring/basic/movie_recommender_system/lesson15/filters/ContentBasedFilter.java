@@ -1,6 +1,8 @@
-package io.spring.basic.movie_recommender_system.lesson14.filters;
+package io.spring.basic.movie_recommender_system.lesson15.filters;
 
-import io.spring.basic.movie_recommender_system.lesson14.models.Movie;
+import io.spring.basic.movie_recommender_system.lesson15.models.Movie;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
@@ -8,11 +10,13 @@ import java.util.List;
 
  Spring creates a singleton bean even before we ask for it,
  while a prototype bean is not created till we request Spring for the bean. In the code widget below */
+@Component
 public class ContentBasedFilter implements MoviesFilter {
 
     //for keeping track of instances created
     private static int instances = 0;
 
+    @Autowired
     private Movie movie;
 
     public ContentBasedFilter() {

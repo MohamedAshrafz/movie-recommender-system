@@ -1,4 +1,4 @@
-package io.spring.basic.movie_recommender_system.lesson14.models;
+package io.spring.basic.movie_recommender_system.lesson15.models;
 
 
 public class Movie {

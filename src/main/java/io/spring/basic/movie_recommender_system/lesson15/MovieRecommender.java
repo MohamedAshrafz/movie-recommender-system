@@ -1,6 +1,8 @@
-package io.spring.basic.movie_recommender_system.lesson14;
+package io.spring.basic.movie_recommender_system.lesson15;
 
-import io.spring.basic.movie_recommender_system.lesson14.filters.MoviesFilter;
+import io.spring.basic.movie_recommender_system.lesson15.filters.MoviesFilter;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 import java.util.List;
 
@@ -8,8 +10,8 @@ public class MovieRecommender {
 
     private MoviesFilter filter;
 
-
-    public MovieRecommender(MoviesFilter filter) {
+    @Autowired
+    public MovieRecommender(@Qualifier("collaborativeFilter") MoviesFilter filter) {
         System.out.println("In RecommenderImplementation setter method..dependency injection");
         this.filter = filter;
     }

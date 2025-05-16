@@ -1,4 +1,4 @@
-package io.spring.basic.movie_recommender_system.lesson14;
+package io.spring.basic.movie_recommender_system.lesson15;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
