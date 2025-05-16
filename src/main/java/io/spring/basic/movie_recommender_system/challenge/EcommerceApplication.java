@@ -4,6 +4,8 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
+import java.util.Arrays;
+
 @Configuration
 @ComponentScan
 public class EcommerceApplication {
@@ -11,8 +13,8 @@ public class EcommerceApplication {
     public static void main(String[] args) {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(EcommerceApplication.class);
 
-        context.getA
         DiscountService discountService = context.getBean(DiscountService.class);
+        System.out.println(discountService.getDiscountStrategies());
 
         System.out.println("Applying discounts:");
         

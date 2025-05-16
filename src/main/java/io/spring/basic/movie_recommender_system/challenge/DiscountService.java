@@ -17,6 +17,7 @@ public class DiscountService {
     public DiscountService(DiscountStrategy discountDEF,
                            @Qualifier("BDS") DiscountStrategy discountBDS,
                            @Qualifier("MDS") DiscountStrategy discountMDS,
+                           // Will get all the beans of type DiscountStrategy in the context and put them in this list
                            List<DiscountStrategy> discountStrategies) {
         this.discountDEF = discountDEF;
         this.discountBDS = discountBDS;
@@ -42,5 +43,9 @@ public class DiscountService {
             discountedPrice = strategy.applyDiscount(discountedPrice);
         }
         return discountedPrice;
+    }
+
+    public List<DiscountStrategy> getDiscountStrategies() {
+        return discountStrategies;
     }
 }
