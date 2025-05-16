@@ -1,40 +1,36 @@
-package io.spring.basic.movie_recommender_system.lesson9.filters;
+package io.spring.basic.movie_recommender_system.lesson13.filters;
 
-import io.spring.basic.movie_recommender_system.lesson9.models.Movie;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Lookup;
-import org.springframework.beans.factory.config.ConfigurableBeanFactory;
+import io.spring.basic.movie_recommender_system.lesson13.models.Movie;
 import org.springframework.context.annotation.Primary;
-import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-@Component
 /** Important Note:
 
  Spring creates a singleton bean even before we ask for it,
  while a prototype bean is not created till we request Spring for the bean. In the code widget below */
+@Component
 @Primary
 public class ContentBasedFilter implements MoviesFilter {
 
     //for keeping track of instances created
-    private static int instances= 0;
+    private static int instances = 0;
 
-    @Autowired
     private Movie movie;
 
     public ContentBasedFilter() {
         instances++;
-        System.out.printf("ContentBasedFilter constructor called, The NO of instances is [%s]\n", getInstances());
+        System.out.println("In ContentBasedFilter constructor method");
     }
 
-//    @Lookup // Like context.getBean for every movie bean
+//    //    @Lookup // Like context.getBean for every movie bean
+    @Override
     public Movie getMovie() {
         return movie;
     }
 
-    public static int getInstances(){
+    public static int getInstances() {
         return ContentBasedFilter.instances;
     }
 

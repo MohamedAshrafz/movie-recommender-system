@@ -1,13 +1,12 @@
-package io.spring.basic.movie_recommender_system.lesson12.filters;
+package io.spring.basic.movie_recommender_system.lesson13.filters;
 
-import io.spring.basic.movie_recommender_system.lesson12.models.Movie;
-import jakarta.inject.Inject;
+import io.spring.basic.movie_recommender_system.lesson13.models.Movie;
 import jakarta.inject.Named;
-import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-@Named
+@Component
 public class CollaborativeFilter implements MoviesFilter {
     public CollaborativeFilter() {
         System.out.println("The CollaborativeFilter bean constructor was called, creating the bean ..");
@@ -17,7 +16,7 @@ public class CollaborativeFilter implements MoviesFilter {
         return List.of("Finding Nemo", "Ice Age", "Toy Story");
     }
 
-    @Inject
+
     private Movie movie;
 
     @Override
