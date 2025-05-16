@@ -1,19 +1,15 @@
-package io.spring.basic.movie_recommender_system.lesson13;
+package io.spring.basic.movie_recommender_system.lesson14;
 
-import io.spring.basic.movie_recommender_system.lesson13.filters.MoviesFilter;
-import jakarta.inject.Inject;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import io.spring.basic.movie_recommender_system.lesson14.filters.MoviesFilter;
 
 import java.util.List;
 
-@Component
 public class MovieRecommender {
 
     private MoviesFilter filter;
 
-    @Autowired
-    public void setFilter(MoviesFilter filter) {
+
+    public MovieRecommender(MoviesFilter filter) {
         System.out.println("In RecommenderImplementation setter method..dependency injection");
         this.filter = filter;
     }

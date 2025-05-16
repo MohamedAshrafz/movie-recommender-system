@@ -1,4 +1,4 @@
-package io.spring.basic.movie_recommender_system.lesson13.filters;
+package io.spring.basic.movie_recommender_system.lesson14.filters;
 
 public interface MovieFiltersNames {
     String COLLABORATIVE_FILTER_BEAN_NAME = "Collaborative Filter Bean";

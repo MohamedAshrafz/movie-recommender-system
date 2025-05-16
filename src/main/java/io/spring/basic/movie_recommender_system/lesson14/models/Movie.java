@@ -1,9 +1,6 @@
-package io.spring.basic.movie_recommender_system.lesson13.models;
+package io.spring.basic.movie_recommender_system.lesson14.models;
 
-import org.springframework.stereotype.Component;
 
-@Component
-//@Scope(value = ConfigurableBeanFactory.SCOPE_PROTOTYPE, proxyMode = ScopedProxyMode.TARGET_CLASS)
 public class Movie {
     //for keeping track of instances created
     private static int instances = 0;

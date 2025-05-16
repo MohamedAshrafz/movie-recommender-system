@@ -1,6 +1,6 @@
-package io.spring.basic.movie_recommender_system.lesson13.filters;
+package io.spring.basic.movie_recommender_system.lesson14.filters;
 
-import io.spring.basic.movie_recommender_system.lesson13.models.Movie;
+import io.spring.basic.movie_recommender_system.lesson14.models.Movie;
 
 import java.util.List;
 

@@ -1,0 +1,25 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+  http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions -->
+    <bean id="contentBasedFilter"
+          class="io.spring.basic.movie_recommender_system.lesson14.filters.ContentBasedFilter">
+        <property name="movie" ref="movie"/>
+    </bean>
+
+    <bean id="collaborativeFilter"
+          class="io.spring.basic.movie_recommender_system.lesson14.filters.CollaborativeFilter">
+        <property name="movie" ref="movie"/>
+    </bean>
+
+    <bean id="movie"
+          class="io.spring.basic.movie_recommender_system.lesson14.models.Movie">
+    </bean>
+
+    <bean id="movieRecommender"
+          class="io.spring.basic.movie_recommender_system.lesson14.MovieRecommender">
+        <constructor-arg name="filter" ref="contentBasedFilter"/>
+    </bean>
+</beans>
