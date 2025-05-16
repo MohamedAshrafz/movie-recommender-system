@@ -19,7 +19,7 @@ public class Movie {
 
     public Movie() {
         instances++;
-        System.out.printf("Movie constructor called, The NO of instances are [%s]\n", getInstances());
+        System.out.printf("Movie constructor called, The NO of instances is [%s]\n", getInstances());
     }
 
     public static int getInstances() {

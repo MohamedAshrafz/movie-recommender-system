@@ -3,11 +3,9 @@ package io.spring.basic.movie_recommender_system.lesson9;
 import io.spring.basic.movie_recommender_system.lesson9.filters.ContentBasedFilter;
 import io.spring.basic.movie_recommender_system.lesson9.filters.MoviesFilter;
 import io.spring.basic.movie_recommender_system.lesson9.models.Movie;
-import io.spring.basic.movie_recommender_system.spare.series.Series;
 import org.springframework.boot.SpringApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.FilterType;
 
 //@SpringBootApplication
 // like using @Configuration, @ComponentScan & @EnableAutoConfiguration
@@ -33,9 +31,6 @@ public class MovieRecommenderSystemApplication {
         System.out.println(filter.getMovie());
         System.out.println(filter.getMovie());
         System.out.println(filter.getMovie());
-
-        Series series = appContext.getBean(Series.class);
-        System.out.println(series);
 
         //Print number of instances of each bean
         System.out.println("\nContentBasedFilter instances created: " + ContentBasedFilter.getInstances());

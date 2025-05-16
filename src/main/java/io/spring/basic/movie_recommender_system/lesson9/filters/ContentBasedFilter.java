@@ -26,7 +26,7 @@ public class ContentBasedFilter implements MoviesFilter {
 
     public ContentBasedFilter() {
         instances++;
-        System.out.printf("ContentBasedFilter constructor called, The NO of instances are [%s]\n", getInstances());
+        System.out.printf("ContentBasedFilter constructor called, The NO of instances is [%s]\n", getInstances());
     }
 
 //    @Lookup // Like context.getBean for every movie bean
